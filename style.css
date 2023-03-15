@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+/*font-family: 'Montserrat',sansserif;*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Montserrat',sansserif;
+    background-color:hsl(30, 38%, 92%);
+    font-size: 14px;
+    min-height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    margin: 30px auto;
+    padding: 0 30px;
+}
+.grid {
+    max-width: 700px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    
+}
+.img img{
+    max-width: 100%;
+    display: inherit;
+}
+.cardcontent{
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+h5.productcontent{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 13px; 
+    font-weight: 500;
+    color:hsl(228, 12%, 48%) ;
+}
+h2.producttitle{
+    font-family:'Fraunces',serif;
+    font-size: 35px;
+    line-height: 1em;
+    color:  hsl(212, 21%, 14%);
+}
+p.productdescription{
+    color: hsl(228, 12%, 48%) ;
+    line-height: 1.6em;
+}
+.price{
+    display: flex;
+    align-items: center;
+    padding-right: 25px;
+}
+p.currentprice{
+    font-family: 'Fraunces',serif;
+    color:hsl(158, 36%, 37%);
+    font-size: 35px;
+}
+p.previousprice{
+    color:hsl(228, 12%, 48%) ;
+    text-decoration: line-through;
+}
+button.ctrl{
+    background-color:hsl(158, 36%, 37%) ;
+    border: none;
+    padding: 15px 0;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color .3s ease;
+    width: 100%;
+
+}
+button.ctrl img{
+    padding-right: 7px;
+}
+button.ctrl:hover{
+    background-color:hsl(158, 36%, 23%) ;
+}
+
+
+
+@media only screen and (max-width: 628px){
+    .grid{
+        grid-template-columns: 1fr;
+    }
+    .img img{
+        max-height:450px;
+        width: 100%;
+        object-fit: cover;
+    }
+    .cardcontent{
+        display: block;
+    }
+    h5.producttitle,h2.productname,p.productdescription,.price{
+        padding-bottom: 20px;
+    }
+}
+
+
+
+
+
